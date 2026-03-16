@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshaya Srinivasan | Data Engineer</title>
+<title>Akshaya Srinivasan | Data Engineer & Software Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box}
+
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:linear-gradient(-45deg,#020617,#0f172a,#020617,#111827);
+background:linear-gradient(-45deg,#020617,#0f172a,#111827,#020617);
 background-size:400% 400%;
-animation:gradientBG 15s ease infinite;
+animation:gradientBG 16s ease infinite;
 color:#e5e7eb
 }
 
@@ -22,30 +24,41 @@ color:#e5e7eb
 100%{background-position:0% 50%}
 }
 
-.container{max-width:1100px;margin:auto;padding:40px}
+.container{max-width:1150px;margin:auto;padding:50px}
 
 .hero{
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:40px;
-flex-wrap:wrap
+flex-wrap:wrap;
+gap:40px
 }
 
-.hero h1{font-size:52px;margin:0}
+.hero h1{font-size:54px;margin:0;font-weight:700}
 
-.highlight{
+.role{
+font-size:40px;
 color:#22d3ee;
-text-shadow:0 0 20px rgba(34,211,238,0.6)
+margin-top:10px;
+font-weight:700
 }
 
-.hero p{color:#94a3b8;max-width:500px}
+.hero p{
+color:#94a3b8;
+max-width:520px;
+line-height:1.7;
+margin-top:20px
+}
 
-.btns a{
+.btns{
+margin-top:25px
+}
+
+.btn{
 display:inline-block;
-margin-right:12px;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:10px;
+margin-right:12px;
 text-decoration:none;
 font-weight:600;
 transition:all .25s ease
@@ -53,12 +66,12 @@ transition:all .25s ease
 
 .primary{
 background:#22d3ee;
-color:black
+color:#020617
 }
 
 .primary:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(34,211,238,.35)
+box-shadow:0 12px 25px rgba(34,211,238,.35)
 }
 
 .secondary{
@@ -67,188 +80,331 @@ color:#e5e7eb
 }
 
 .secondary:hover{
-background:#111827
+background:#0f172a
 }
 
-.hero img{
+.profile{
+background:linear-gradient(135deg,#111827,#1f2937);
+padding:35px;
 border-radius:20px;
-width:180px;
-box-shadow:0 20px 40px rgba(0,0,0,.6)
+box-shadow:0 25px 60px rgba(0,0,0,.6)
 }
 
-.section{margin-top:90px}
+.profile img{
+width:180px;
+border-radius:50%
+}
 
-.section h2{
-font-size:34px
+.section{margin-top:100px}
+
+.section-title{
+font-size:36px;
+margin-bottom:10px
+}
+
+.section-sub{
+color:#94a3b8;
+margin-bottom:40px
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
-margin-top:30px
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px
 }
 
 .card{
-background:rgba(15,23,42,0.6);
+background:rgba(15,23,42,0.65);
 backdrop-filter:blur(10px);
-padding:22px;
-border-radius:16px;
+padding:25px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,0.06);
 transition:all .25s ease
 }
 
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,.6);
+box-shadow:0 20px 45px rgba(0,0,0,.6);
 border-color:#22d3ee
 }
 
 .card h3{margin-top:0}
 
-.card p{color:#94a3b8;line-height:1.6}
+.card ul{
+padding-left:18px;
+color:#cbd5f5;
+line-height:1.8
+}
 
 .timeline{
 border-left:2px solid #22d3ee;
-padding-left:20px;
-margin-top:25px
+padding-left:25px;
+margin-top:30px
 }
 
 .timeline-item{
-margin-bottom:30px
+margin-bottom:35px
 }
 
 .timeline-item h3{margin:0}
 
-.timeline-item span{color:#22d3ee;font-weight:600}
+.timeline-item span{
+color:#22d3ee;
+font-weight:600
+}
+
+.timeline-item p{
+color:#94a3b8;
+margin-top:8px;
+line-height:1.6
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px
+}
 
 .project{
 background:rgba(2,6,23,0.6);
-padding:24px;
-border-radius:16px;
+padding:26px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,0.06);
-margin-bottom:20px;
 transition:all .25s ease
 }
 
 .project:hover{
 transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,.6);
+box-shadow:0 20px 45px rgba(0,0,0,.6);
 border-color:#22d3ee
 }
 
+.project h3{margin-top:0}
+
+.project p{color:#94a3b8;line-height:1.6}
+
 .project a{
 color:#22d3ee;
-text-decoration:none;
-font-weight:600
+font-weight:600;
+text-decoration:none
 }
 
-footer{
+.footer{
+margin-top:110px;
+padding-top:40px;
+border-top:1px solid #1f2937;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:30px
+}
+
+.footer p{
+color:#94a3b8;
+max-width:400px
+}
+
+.quick-links a{
+color:#94a3b8;
+display:block;
+margin-bottom:8px;
+text-decoration:none
+}
+
+.quick-links a:hover{
+color:#22d3ee
+}
+
+.connect a{
+margin-right:12px;
+color:#94a3b8;
+text-decoration:none
+}
+
+.connect a:hover{color:#22d3ee}
+
+.copyright{
 text-align:center;
-margin-top:90px;
+margin-top:40px;
 color:#64748b;
 font-size:14px
 }
 
 @media(max-width:800px){
 .hero h1{font-size:38px}
+.role{font-size:30px}
 }
 
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
+<!-- HERO -->
 <div class="hero">
+
 <div>
-<h1>Hi, I'm <br>Akshaya Srinivasan</h1>
-<h2 class="highlight">Data Engineer | ETL | Cloud Pipelines</h2>
-<p>I design, develop, and maintain production‑grade ETL pipelines and cloud‑native data integrations using Python, SQL, AWS, and Azure.</p>
+<h1>Hi, I'm Akshaya Srinivasan.</h1>
+
+<div class="role">Data Engineer & Software Developer.</div>
+
+<p>
+I design, develop, and maintain production‑grade ETL pipelines and cloud‑native data integrations using Python, SQL, AWS, and Azure.
+</p>
 
 <div class="btns">
-<a class="primary" href="#">Download Resume</a>
-<a class="secondary" href="#">GitHub</a>
-<a class="secondary" href="#">LinkedIn</a>
-</div>
-</div>
-
-<img src="https://avatars.githubusercontent.com/u/583231?v=4">
+<a class="btn primary" href="resume.pdf" target="_blank">Download Resume</a>
+<a class="btn secondary" href="https://github.com/YOUR_GITHUB" target="_blank">View GitHub</a>
+<a class="btn secondary" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
 </div>
 
+</div>
 
+<div class="profile">
+<img src="profile.jpg" alt="Akshaya profile photo">
+</div>
+
+</div>
+
+
+<!-- TECHNICAL ARSENAL -->
 <div class="section">
-<h2>Technical Arsenal</h2>
+
+<div class="section-title">Technical Arsenal</div>
+<div class="section-sub">Specialized in data engineering, cloud platforms, and modern ETL workflows.</div>
 
 <div class="cards">
 
 <div class="card">
 <h3>Programming & Data</h3>
-<p>Python<br>SQL<br>Pandas</p>
+<ul>
+<li>Python</li>
+<li>SQL</li>
+<li>Pandas</li>
+</ul>
 </div>
 
 <div class="card">
 <h3>Cloud & Tools</h3>
-<p>AWS<br>Azure<br>ETL Pipelines<br>Git</p>
+<ul>
+<li>AWS (S3 / RDS / CloudWatch)</li>
+<li>Microsoft Azure</li>
+<li>ETL Pipelines</li>
+<li>Git</li>
+</ul>
 </div>
 
 <div class="card">
 <h3>Databases</h3>
-<p>PostgreSQL<br>SQLite</p>
+<ul>
+<li>PostgreSQL</li>
+<li>SQLite</li>
+</ul>
 </div>
 
 <div class="card">
 <h3>Soft Skills</h3>
-<p>Problem Solving<br>Design Thinking</p>
+<ul>
+<li>Problem Solving</li>
+<li>Design Thinking</li>
+</ul>
 </div>
 
 </div>
 </div>
 
 
+<!-- EXPERIENCE -->
 <div class="section">
-<h2>Professional Experience</h2>
+
+<div class="section-title">Professional Experience</div>
+<div class="section-sub">Delivering reliable, large‑scale enterprise data solutions.</div>
 
 <div class="timeline">
 
 <div class="timeline-item">
 <h3>Associate Software Engineer</h3>
-<span>Accenture | Jul 2023 – Jul 2025</span>
-<p>Designed production ETL pipelines using SQL and Azure, supported enterprise data workflows, improved data quality validation and supported multiple enterprise clients.</p>
+<span>Accenture • Jul 2023 – Jul 2025</span>
+<p>
+Designed production ETL pipelines using SQL and Azure, supported 10+ enterprise clients, improved data quality through schema validation and automation.
+</p>
 </div>
 
 <div class="timeline-item">
 <h3>Embedded Systems Training</h3>
-<span>Techvolt Software Solutions | Dec 2021 – Jan 2022</span>
-<p>Completed training in embedded systems covering hardware‑software integration and low‑level programming fundamentals.</p>
+<span>Techvolt Software Solutions • Dec 2021 – Jan 2022</span>
+<p>
+Completed intensive training in embedded systems focusing on hardware‑software integration and low‑level programming fundamentals.
+</p>
 </div>
 
 </div>
 </div>
 
 
+<!-- PROJECTS -->
 <div class="section">
-<h2>Featured Data Pipelines</h2>
+
+<div class="section-title">Featured Data Pipelines</div>
+<div class="section-sub">Real‑world projects demonstrating end‑to‑end data architecture and cloud integration.</div>
+
+<div class="projects">
 
 <div class="project">
 <h3>End‑to‑End Data Engineering Pipeline</h3>
-<p>Designed a robust ETL pipeline using Python, SQL and Pandas including staging and audit layers for reliable data validation.</p>
-<a href="#">View Code →</a>
+<p>
+Robust data pipeline built using Python, SQL, and Pandas including staging and audit layers for reliable processing and validation.
+</p>
+<a href="https://github.com/YOUR_PROJECT" target="_blank">View Code →</a>
 </div>
 
 <div class="project">
-<h3>Cloud‑Native Data Architecture</h3>
-<p>Built scalable cloud pipeline integrating AWS S3 storage with PostgreSQL database enabling efficient data flow and analytics.</p>
-<a href="#">View Code →</a>
+<h3>Cloud‑Native Architecture</h3>
+<p>
+Scalable cloud pipeline integrating AWS S3 storage with PostgreSQL for optimized data flow and analytics.
+</p>
+<a href="https://github.com/YOUR_PROJECT" target="_blank">View Code →</a>
+</div>
+
+</div>
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+
+<div>
+<h3>Akshaya Srinivasan</h3>
+<p>
+Data Engineer & Software Developer. Designing, developing and maintaining production‑grade ETL pipelines and cloud‑native data integrations.
+</p>
+</div>
+
+<div class="quick-links">
+<h4>Quick Links</h4>
+<a href="#">Hero Section</a>
+<a href="#">Technical Skills</a>
+<a href="#">Experience Timeline</a>
+<a href="#">Featured Projects</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="connect">
+<h4>Connect</h4>
+<a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+<a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+<a href="mailto:your@email.com">Email</a>
 </div>
 
 </div>
 
-
-<footer>
-© 2026 Akshaya Srinivasan • Data Engineer Portfolio
-</footer>
+<div class="copyright">
+© 2025 Akshaya Srinivasan. All rights reserved.
+</div>
 
 </div>
+
 </body>
 </html>
