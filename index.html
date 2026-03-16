@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshaya Srinivasan | Data Engineer & Software Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
@@ -12,227 +12,98 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:linear-gradient(-45deg,#020617,#0f172a,#111827,#020617);
-background-size:400% 400%;
-animation:gradientBG 16s ease infinite;
+background:linear-gradient(135deg,#020617,#0f172a,#111827);
 color:#e5e7eb
 }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
+.container{max-width:1200px;margin:auto;padding:60px 30px}
 
-.container{max-width:1150px;margin:auto;padding:50px}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap}
 
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:40px
-}
+.hero h1{font-size:64px;line-height:1.05;margin:0;font-weight:800}
 
-.hero h1{font-size:54px;margin:0;font-weight:700}
+.hero .role{font-size:48px;color:#22d3ee;font-weight:800;margin-top:10px}
 
-.role{
-font-size:40px;
-color:#22d3ee;
-margin-top:10px;
-font-weight:700
-}
+.hero p{margin-top:20px;color:#94a3b8;line-height:1.7;max-width:520px;font-size:18px}
 
-.hero p{
-color:#94a3b8;
-max-width:520px;
-line-height:1.7;
-margin-top:20px
-}
+.buttons{margin-top:30px}
 
-.btns{
-margin-top:25px
-}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:12px}
 
-.btn{
-display:inline-block;
-padding:12px 22px;
-border-radius:10px;
-margin-right:12px;
-text-decoration:none;
-font-weight:600;
-transition:all .25s ease
-}
+.btn-primary{background:#22d3ee;color:#020617}
 
-.primary{
-background:#22d3ee;
-color:#020617
-}
+.btn-outline{border:1px solid #334155;color:white}
 
-.primary:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(34,211,238,.35)
-}
+.btn-outline:hover{background:#0f172a}
 
-.secondary{
-border:1px solid #334155;
-color:#e5e7eb
-}
+.avatar-box{background:linear-gradient(135deg,#111827,#1f2937);padding:40px;border-radius:22px}
 
-.secondary:hover{
-background:#0f172a
-}
+.avatar-box img{width:200px;border-radius:50%}
 
-.profile{
-background:linear-gradient(135deg,#111827,#1f2937);
-padding:35px;
-border-radius:20px;
-box-shadow:0 25px 60px rgba(0,0,0,.6)
-}
+.section{margin-top:120px}
 
-.profile img{
-width:180px;
-border-radius:50%
-}
+.section-title{font-size:44px;font-weight:800;text-align:center}
 
-.section{margin-top:100px}
+.section-sub{color:#94a3b8;text-align:center;margin-top:10px;margin-bottom:60px}
 
-.section-title{
-font-size:36px;
-margin-bottom:10px
-}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
 
-.section-sub{
-color:#94a3b8;
-margin-bottom:40px
-}
+.card{background:#0f172a;padding:30px;border-radius:20px;border:1px solid #1e293b}
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px
-}
+.card h3{margin-top:0;font-size:20px}
 
-.card{
-background:rgba(15,23,42,0.65);
-backdrop-filter:blur(10px);
-padding:25px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.06);
-transition:all .25s ease
-}
+.card ul{padding-left:18px;color:#94a3b8;line-height:1.9}
 
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,.6);
-border-color:#22d3ee
-}
+.timeline{position:relative;margin-top:60px}
 
-.card h3{margin-top:0}
+.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#22d3ee}
 
-.card ul{
-padding-left:18px;
-color:#cbd5f5;
-line-height:1.8
-}
+.timeline-item{width:45%;padding:30px;border:1px solid #334155;border-radius:18px;background:#020617;position:relative}
 
-.timeline{
-border-left:2px solid #22d3ee;
-padding-left:25px;
-margin-top:30px
-}
+.timeline-item.left{margin-right:auto}
+.timeline-item.right{margin-left:auto}
 
-.timeline-item{
-margin-bottom:35px
-}
+.timeline-item h3{margin-top:0}
 
-.timeline-item h3{margin:0}
+.timeline-item span{color:#22d3ee;font-weight:600}
 
-.timeline-item span{
-color:#22d3ee;
-font-weight:600
-}
+.timeline-item p{color:#94a3b8}
 
-.timeline-item p{
-color:#94a3b8;
-margin-top:8px;
-line-height:1.6
-}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px
-}
-
-.project{
-background:rgba(2,6,23,0.6);
-padding:26px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.06);
-transition:all .25s ease
-}
-
-.project:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,.6);
-border-color:#22d3ee
-}
+.project{background:#020617;border:1px solid #1e293b;padding:30px;border-radius:18px}
 
 .project h3{margin-top:0}
 
-.project p{color:#94a3b8;line-height:1.6}
+.project p{color:#94a3b8}
 
-.project a{
-color:#22d3ee;
-font-weight:600;
-text-decoration:none
-}
+.project a{color:#22d3ee;text-decoration:none;font-weight:600}
 
-.footer{
-margin-top:110px;
-padding-top:40px;
-border-top:1px solid #1f2937;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:30px
-}
+.contact{margin-top:120px;text-align:center}
 
-.footer p{
-color:#94a3b8;
-max-width:400px
-}
+.contact h2{font-size:48px;margin-bottom:10px}
 
-.quick-links a{
-color:#94a3b8;
-display:block;
-margin-bottom:8px;
-text-decoration:none
-}
+.contact p{color:#94a3b8}
 
-.quick-links a:hover{
-color:#22d3ee
-}
+.contact-grid{display:flex;justify-content:center;gap:80px;margin-top:40px}
 
-.connect a{
-margin-right:12px;
-color:#94a3b8;
-text-decoration:none
-}
+.contact-grid div{font-size:20px}
 
-.connect a:hover{color:#22d3ee}
+.email-btn{display:inline-block;margin-top:40px;padding:16px 32px;border-radius:14px;background:linear-gradient(45deg,#22d3ee,#a855f7);color:white;text-decoration:none;font-weight:600}
 
-.copyright{
-text-align:center;
-margin-top:40px;
-color:#64748b;
-font-size:14px
-}
+.footer{margin-top:120px;border-top:1px solid #1e293b;padding-top:40px;display:flex;justify-content:space-between;flex-wrap:wrap}
 
-@media(max-width:800px){
-.hero h1{font-size:38px}
-.role{font-size:30px}
+.footer-links a{display:block;color:#94a3b8;text-decoration:none;margin-bottom:6px}
+
+.footer-links a:hover{color:#22d3ee}
+
+.copy{text-align:center;margin-top:40px;color:#64748b}
+
+@media(max-width:900px){
+.hero h1{font-size:42px}
+.hero .role{font-size:34px}
+.timeline::before{display:none}
+.timeline-item{width:100%;margin-bottom:30px}
 }
 
 </style>
@@ -247,29 +118,28 @@ font-size:14px
 
 <div>
 <h1>Hi, I'm Akshaya Srinivasan.</h1>
-
 <div class="role">Data Engineer & Software Developer.</div>
 
 <p>
-I design, develop, and maintain production‑grade ETL pipelines and cloud‑native data integrations using Python, SQL, AWS, and Azure.
+I design, develop, and maintain production-grade ETL pipelines and cloud-native data integrations using Python, SQL, AWS, and Azure.
 </p>
 
-<div class="btns">
-<a class="btn primary" href="resume.pdf" target="_blank">Download Resume</a>
-<a class="btn secondary" href="https://github.com/AkshayaSrinivasan15" target="_blank">View GitHub</a>
-<a class="btn secondary" href="https://www.linkedin.com/in/akshayasrini/" target="_blank">LinkedIn</a>
+<div class="buttons">
+<a class="btn btn-primary" href="resume.pdf" target="_blank">Download Resume</a>
+<a class="btn btn-outline" href="https://github.com/AkshayaSrinivasan15" target="_blank">View GitHub</a>
+<a class="btn btn-outline" href="https://www.linkedin.com/in/akshayasrini/" target="_blank">LinkedIn</a>
 </div>
 
 </div>
 
-<div class="profile">
-<img src="profile.jpeg" alt="Akshaya profile photo">
+<div class="avatar-box">
+<img src="profile.jpeg" alt="profile">
 </div>
 
 </div>
 
 
-<!-- TECHNICAL ARSENAL -->
+<!-- SKILLS -->
 <div class="section">
 
 <div class="section-title">Technical Arsenal</div>
@@ -289,7 +159,7 @@ I design, develop, and maintain production‑grade ETL pipelines and cloud‑nat
 <div class="card">
 <h3>Cloud & Tools</h3>
 <ul>
-<li>AWS (S3 / RDS / CloudWatch)</li>
+<li>AWS S3 / RDS / CloudWatch</li>
 <li>Microsoft Azure</li>
 <li>ETL Pipelines</li>
 <li>Git</li>
@@ -320,23 +190,23 @@ I design, develop, and maintain production‑grade ETL pipelines and cloud‑nat
 <div class="section">
 
 <div class="section-title">Professional Experience</div>
-<div class="section-sub">Delivering reliable, large‑scale enterprise data solutions.</div>
+<div class="section-sub">Delivering reliable, large-scale enterprise data solutions.</div>
 
 <div class="timeline">
 
-<div class="timeline-item">
+<div class="timeline-item left">
 <h3>Associate Software Engineer</h3>
 <span>Accenture • Jul 2023 – Jul 2025</span>
 <p>
-Designed production ETL pipelines using SQL and Azure, supported 10+ enterprise clients, improved data quality through schema validation and automation.
+Designed production ETL pipelines using SQL/Azure, supported 10+ enterprise clients, improved data quality through schema validation and automation.
 </p>
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item right">
 <h3>Embedded Systems Training</h3>
 <span>Techvolt Software Solutions • Dec 2021 – Jan 2022</span>
 <p>
-Completed intensive training in embedded systems focusing on hardware‑software integration and low‑level programming fundamentals.
+Completed intensive training in embedded systems focusing on hardware‑software integration and low‑level programming.
 </p>
 </div>
 
@@ -348,27 +218,51 @@ Completed intensive training in embedded systems focusing on hardware‑software
 <div class="section">
 
 <div class="section-title">Featured Data Pipelines</div>
-<div class="section-sub">Real‑world projects demonstrating end‑to‑end data architecture and cloud integration.</div>
+<div class="section-sub">Real‑world projects demonstrating end‑to‑end data architecture and cloud‑native integration.</div>
 
 <div class="projects">
 
 <div class="project">
 <h3>End‑to‑End Data Engineering Pipeline</h3>
 <p>
-Robust data pipeline built using Python, SQL, and Pandas including staging and audit layers for reliable processing and validation.
+Robust data pipeline featuring staging & audit layers for reliable data processing and validation.
 </p>
-<a href="https://github.com/YOUR_PROJECT" target="_blank">View Code →</a>
+<a href="https://github.com/AkshayaSrinivasan15/End-to-End-Data-Engineering-Pipeline" target="_blank">View Code →</a>
 </div>
 
 <div class="project">
-<h3>Cloud‑Native Architecture</h3>
+<h3>Cloud‑Native Data Architecture</h3>
 <p>
-Scalable cloud pipeline integrating AWS S3 storage with PostgreSQL for optimized data flow and analytics.
+Scalable AWS data pipeline integrating S3 and PostgreSQL for optimized cloud analytics workflows.
 </p>
-<a href="https://github.com/YOUR_PROJECT" target="_blank">View Code →</a>
+<a href="https://github.com/AkshayaSrinivasan15/cloud-native-data-engineering-aws" target="_blank">View Code →</a>
 </div>
 
 </div>
+</div>
+
+
+<!-- CONTACT -->
+<div class="contact">
+
+<h2>Let's Build Scalable Data Solutions</h2>
+
+<p>Currently open to new opportunities. Let's connect and discuss how I can add value to your data team.</p>
+
+<div class="contact-grid">
+<div>
+<strong>Email</strong><br>
+akshayasrinivasan153@gmail.com
+</div>
+
+<div>
+<strong>Phone</strong><br>
++91‑9361485330
+</div>
+</div>
+
+<a class="email-btn" href="mailto:akshayasrinivasan153@gmail.com">Send an Email</a>
+
 </div>
 
 
@@ -377,32 +271,20 @@ Scalable cloud pipeline integrating AWS S3 storage with PostgreSQL for optimized
 
 <div>
 <h3>Akshaya Srinivasan</h3>
-<p>
-Data Engineer & Software Developer. Designing, developing and maintaining production‑grade ETL pipelines and cloud‑native data integrations.
-</p>
+<p>Data Engineer & Software Developer building scalable data systems.</p>
 </div>
 
-<div class="quick-links">
-<h4>Quick Links</h4>
+<div class="footer-links">
+<strong>Quick Links</strong>
 <a href="#">Hero Section</a>
 <a href="#">Technical Skills</a>
 <a href="#">Experience Timeline</a>
 <a href="#">Featured Projects</a>
-<a href="#">Contact</a>
-</div>
-
-<div class="connect">
-<h4>Connect</h4>
-<a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
-<a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-<a href="mailto:your@email.com">Email</a>
 </div>
 
 </div>
 
-<div class="copyright">
-© 2025 Akshaya Srinivasan. All rights reserved.
-</div>
+<div class="copy">© 2025 Akshaya Srinivasan. All rights reserved.</div>
 
 </div>
 
