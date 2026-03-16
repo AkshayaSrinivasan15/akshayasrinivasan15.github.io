@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,19 +16,37 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background: radial-gradient(circle at top,#1a1a2e,#0f0f14);
+background:#0b0b12;
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
+
+/* Animated Background */
+
+body::before{
+content:"";
+position:fixed;
+width:120%;
+height:120%;
+background: radial-gradient(circle at 20% 30%,#00E5FF22,transparent),
+radial-gradient(circle at 80% 70%,#9b5cff22,transparent);
+animation:move 10s infinite alternate;
+z-index:-1;
+}
+
+@keyframes move{
+from{transform:translateY(-50px);}
+to{transform:translateY(50px);}
+}
+
+/* Layout */
 
 section{
-padding:80px 10%;
-}
-
-.container{
+padding:100px 10%;
 max-width:1200px;
 margin:auto;
 }
@@ -39,37 +58,44 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 gap:60px;
+flex-wrap:wrap;
 }
 
-.hero-text h1{
-font-size:54px;
+.hero h1{
+font-size:60px;
 font-weight:700;
 }
 
 .gradient{
-background:linear-gradient(90deg,#00E5FF,#8A5CFF);
+background:linear-gradient(90deg,#00E5FF,#9b5cff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-color:#aaa;
 margin:20px 0 30px;
-max-width:500px;
+color:#aaa;
+max-width:520px;
 }
 
 .buttons{
 display:flex;
 gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-padding:12px 24px;
-border-radius:10px;
+padding:12px 25px;
+border-radius:12px;
 border:1px solid rgba(255,255,255,0.2);
-cursor:pointer;
 text-decoration:none;
 color:white;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+border-color:#00E5FF;
 }
 
 .btn.primary{
@@ -81,8 +107,9 @@ border:none;
 .hero-img{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
+padding:50px;
 border-radius:20px;
-padding:40px;
+box-shadow:0 0 40px #00e5ff22;
 }
 
 .hero-img img{
@@ -90,18 +117,18 @@ width:200px;
 border-radius:50%;
 }
 
-/* SECTION TITLE */
+/* TITLES */
 
-.title{
+.section-title{
 text-align:center;
 margin-bottom:60px;
 }
 
-.title h2{
-font-size:40px;
+.section-title h2{
+font-size:42px;
 }
 
-.title p{
+.section-title p{
 color:#aaa;
 margin-top:10px;
 }
@@ -111,15 +138,21 @@ margin-top:10px;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
 background:rgba(255,255,255,0.04);
-border-radius:18px;
+border-radius:20px;
 padding:30px;
-backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px #00e5ff22;
 }
 
 .card h3{
@@ -135,7 +168,7 @@ padding-left:18px;
 
 .timeline{
 position:relative;
-margin-top:60px;
+margin-top:80px;
 }
 
 .timeline::before{
@@ -145,21 +178,26 @@ left:50%;
 top:0;
 width:3px;
 height:100%;
-background:#00E5FF;
+background:linear-gradient(#00E5FF,#9b5cff);
 }
 
 .timeline-item{
 display:flex;
 justify-content:space-between;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .timeline-card{
 width:45%;
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:14px;
+background:rgba(255,255,255,0.04);
+padding:30px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
+}
+
+.timeline-card:hover{
+box-shadow:0 0 25px #9b5cff33;
 }
 
 /* PROJECTS */
@@ -172,14 +210,21 @@ gap:30px;
 
 .project{
 background:rgba(255,255,255,0.04);
-padding:30px;
-border-radius:16px;
+border-radius:20px;
+padding:35px;
 border:1px solid rgba(255,255,255,0.08);
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 40px #00E5FF22;
 }
 
 .project span{
 color:#00E5FF;
 font-size:14px;
+letter-spacing:1px;
 }
 
 .project a{
@@ -194,22 +239,22 @@ text-align:center;
 }
 
 .contact h2{
-font-size:42px;
-margin-bottom:20px;
+font-size:44px;
 }
 
 .contact-info{
 display:flex;
 justify-content:center;
-gap:60px;
-margin:30px 0;
+gap:80px;
+margin:40px 0;
+flex-wrap:wrap;
 }
 
-.contact button{
-padding:15px 35px;
-background:linear-gradient(90deg,#00E5FF,#8A5CFF);
+.cta{
+padding:16px 40px;
 border:none;
 border-radius:12px;
+background:linear-gradient(90deg,#00E5FF,#9b5cff);
 color:white;
 font-size:16px;
 cursor:pointer;
@@ -218,9 +263,8 @@ cursor:pointer;
 /* FOOTER */
 
 footer{
-margin-top:80px;
-padding:40px 10%;
-background:#0b0b0f;
+padding:60px 10%;
+background:#07070c;
 }
 
 .footer-grid{
@@ -229,24 +273,51 @@ grid-template-columns:2fr 1fr 1fr;
 gap:40px;
 }
 
-footer p{
-color:#aaa;
-}
-
 footer ul{
 list-style:none;
+color:#aaa;
 }
 
 footer li{
 margin-bottom:8px;
+}
+
+footer p{
 color:#aaa;
 }
 
-.copyright{
-margin-top:30px;
-color:#777;
+.copy{
 text-align:center;
-font-size:14px;
+margin-top:40px;
+color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-item{
+flex-direction:column;
+gap:20px;
+}
+
+.timeline-card{
+width:100%;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -256,23 +327,23 @@ font-size:14px;
 
 <!-- HERO -->
 
-<section class="hero container">
+<section class="hero">
 
-<div class="hero-text">
+<div>
 
 <h1>Hi, I'm Akshaya Srinivasan</h1>
-
 <h1 class="gradient">Data Engineer & Software Developer</h1>
 
 <p>
-I design, develop, and maintain production-grade ETL pipelines and cloud-native data integrations using Python, SQL, AWS, and Azure.
+I design, develop, and maintain production-grade ETL pipelines and
+cloud-native data integrations using Python, SQL, AWS, and Azure.
 </p>
 
 <div class="buttons">
 
-<a class="btn primary" href="#">Download Resume</a>
-<a class="btn" href="#">GitHub</a>
-<a class="btn" href="#">LinkedIn</a>
+<a class="btn primary">Download Resume</a>
+<a class="btn">GitHub</a>
+<a class="btn">LinkedIn</a>
 
 </div>
 
@@ -284,13 +355,13 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 </section>
 
-<!-- TECHNICAL ARSENAL -->
+<!-- SKILLS -->
 
 <section>
 
-<div class="title">
+<div class="section-title">
 <h2>Technical <span class="gradient">Arsenal</span></h2>
-<p>Specialized in data engineering, cloud platforms, and modern ETL workflows.</p>
+<p>Specialized in data engineering, cloud platforms, and modern ETL workflows</p>
 </div>
 
 <div class="grid">
@@ -307,7 +378,7 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 <div class="card">
 <h3>Cloud & Tools</h3>
 <ul>
-<li>AWS (S3,RDS)</li>
+<li>AWS S3 / RDS</li>
 <li>Microsoft Azure</li>
 <li>ETL Pipelines</li>
 <li>Git</li>
@@ -338,7 +409,7 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 <section>
 
-<div class="title">
+<div class="section-title">
 <h2>Professional Experience</h2>
 <p>Delivering reliable enterprise data solutions</p>
 </div>
@@ -349,8 +420,10 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 <div class="timeline-card">
 <h3>Associate Software Engineer</h3>
-<p>Accenture</p>
-<p>Designed production ETL pipelines using SQL/Azure supporting enterprise clients.</p>
+<p>Accenture | Jul 2023 – Jul 2025</p>
+<p>
+Designed production ETL pipelines using SQL/Azure supporting enterprise clients.
+</p>
 </div>
 
 <div></div>
@@ -364,7 +437,9 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 <div class="timeline-card">
 <h3>Embedded Systems Training</h3>
 <p>Techvolt Software Solutions</p>
-<p>Training in embedded systems and hardware software integration.</p>
+<p>
+Training in embedded systems, hardware-software integration, and low-level programming.
+</p>
 </div>
 
 </div>
@@ -377,9 +452,9 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 <section>
 
-<div class="title">
+<div class="section-title">
 <h2>Featured Data Pipelines</h2>
-<p>Real world cloud-native data engineering projects</p>
+<p>Real-world projects demonstrating cloud-native data engineering</p>
 </div>
 
 <div class="projects">
@@ -387,14 +462,20 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 <div class="project">
 <span>PYTHON SQL PANDAS</span>
 <h3>End-to-End Data Engineering Pipeline</h3>
-<p>Comprehensive ETL pipeline with staging and audit layer.</p>
+<p>
+Comprehensive ETL pipeline with staging and audit layer for reliable processing.
+</p>
+<br>
 <a href="#">View Code →</a>
 </div>
 
 <div class="project">
 <span>AWS S3 RDS POSTGRESQL</span>
 <h3>Cloud Native Architecture</h3>
-<p>Scalable pipeline integrating AWS S3 with PostgreSQL.</p>
+<p>
+Scalable pipeline integrating AWS S3 with PostgreSQL for optimized data flow.
+</p>
+<br>
 <a href="#">View Code →</a>
 </div>
 
@@ -422,7 +503,7 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 </div>
 
-<button>Send an Email</button>
+<button class="cta">Send an Email</button>
 
 </section>
 
@@ -434,7 +515,10 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 <div>
 <h3>Akshaya Srinivasan</h3>
-<p>Data Engineer & Software Developer building scalable data pipelines.</p>
+<p>
+Data Engineer specializing in ETL pipelines, cloud platforms,
+and scalable data architecture.
+</p>
 </div>
 
 <div>
@@ -458,7 +542,7 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 
 </div>
 
-<div class="copyright">
+<div class="copy">
 © 2025 Akshaya Srinivasan
 </div>
 
