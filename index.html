@@ -4,106 +4,281 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshaya Srinivasan | Data Engineer & Software Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
-
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#020617,#0f172a,#111827);
-color:#e5e7eb
+background:radial-gradient(circle at 20% 20%, #0f172a, #020617 60%);
+color:#e5e7eb;
 }
 
-.container{max-width:1200px;margin:auto;padding:60px 30px}
+.container{
+max-width:1200px;
+margin:auto;
+padding:80px 40px;
+}
 
-.hero{display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap}
+/* HERO */
+.hero{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+align-items:center;
+gap:80px;
+}
 
-.hero h1{font-size:64px;line-height:1.05;margin:0;font-weight:800}
+.hero h1{
+font-size:64px;
+line-height:1.05;
+margin:0;
+font-weight:800;
+}
 
-.hero .role{font-size:48px;color:#22d3ee;font-weight:800;margin-top:10px}
+.hero .role{
+font-size:52px;
+font-weight:800;
+margin-top:10px;
+background:linear-gradient(90deg,#22d3ee,#06b6d4);
+-webkit-background-clip:text;
+color:transparent;
+}
 
-.hero p{margin-top:20px;color:#94a3b8;line-height:1.7;max-width:520px;font-size:18px}
+.hero p{
+margin-top:22px;
+font-size:18px;
+line-height:1.7;
+color:#94a3b8;
+max-width:540px;
+}
 
-.buttons{margin-top:30px}
+.buttons{
+margin-top:32px;
+display:flex;
+gap:14px;
+}
 
-.btn{display:inline-block;padding:14px 26px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:12px}
+.btn{
+padding:14px 26px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+}
 
-.btn-primary{background:#22d3ee;color:#020617}
+.btn-primary{
+background:#22d3ee;
+color:#020617;
+}
 
-.btn-outline{border:1px solid #334155;color:white}
+.btn-outline{
+border:1px solid #334155;
+color:#e5e7eb;
+}
 
-.btn-outline:hover{background:#0f172a}
+.btn-outline:hover{
+background:#0f172a;
+}
 
-.avatar-box{background:linear-gradient(135deg,#111827,#1f2937);padding:40px;border-radius:22px}
+/* PROFILE IMAGE */
+.avatar-box{
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#111827,#1f2937);
+padding:50px;
+border-radius:26px;
+box-shadow:0 25px 80px rgba(0,0,0,0.6);
+}
 
-.avatar-box img{width:200px;border-radius:50%}
+.avatar-box img{
+width:220px;
+border-radius:50%;
+}
 
-.section{margin-top:120px}
+/* SECTION */
+.section{
+margin-top:140px;
+}
 
-.section-title{font-size:44px;font-weight:800;text-align:center}
+.section-title{
+font-size:46px;
+font-weight:800;
+text-align:center;
+}
 
-.section-sub{color:#94a3b8;text-align:center;margin-top:10px;margin-bottom:60px}
+.section-title span{
+background:linear-gradient(90deg,#a855f7,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.section-sub{
+margin-top:12px;
+text-align:center;
+color:#94a3b8;
+margin-bottom:70px;
+}
 
-.card{background:#0f172a;padding:30px;border-radius:20px;border:1px solid #1e293b}
+/* SKILLS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
 
-.card h3{margin-top:0;font-size:20px}
+.card{
+background:#0b1120;
+padding:34px;
+border-radius:20px;
+border:1px solid #1e293b;
+}
 
-.card ul{padding-left:18px;color:#94a3b8;line-height:1.9}
+.card h3{
+margin-top:0;
+margin-bottom:16px;
+}
 
-.timeline{position:relative;margin-top:60px}
+.card ul{
+padding-left:20px;
+line-height:2;
+color:#94a3b8;
+}
 
-.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#22d3ee}
+/* TIMELINE */
+.timeline{
+position:relative;
+margin-top:60px;
+}
 
-.timeline-item{width:45%;padding:30px;border:1px solid #334155;border-radius:18px;background:#020617;position:relative}
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+bottom:0;
+width:3px;
+background:#22d3ee;
+}
+
+.timeline-item{
+width:44%;
+padding:36px;
+background:#020617;
+border-radius:18px;
+border:1px solid #334155;
+position:relative;
+}
 
 .timeline-item.left{margin-right:auto}
 .timeline-item.right{margin-left:auto}
 
 .timeline-item h3{margin-top:0}
 
-.timeline-item span{color:#22d3ee;font-weight:600}
+.timeline-item span{
+color:#22d3ee;
+font-weight:600;
+}
 
-.timeline-item p{color:#94a3b8}
+.timeline-item p{
+color:#94a3b8;
+line-height:1.6;
+}
 
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:32px;
+}
 
-.project{background:#020617;border:1px solid #1e293b;padding:30px;border-radius:18px}
+.project{
+background:#020617;
+padding:36px;
+border-radius:18px;
+border:1px solid #1e293b;
+}
 
 .project h3{margin-top:0}
 
-.project p{color:#94a3b8}
+.project p{
+color:#94a3b8;
+line-height:1.6;
+}
 
-.project a{color:#22d3ee;text-decoration:none;font-weight:600}
+.project a{
+color:#22d3ee;
+font-weight:600;
+text-decoration:none;
+}
 
-.contact{margin-top:120px;text-align:center}
+/* CONTACT */
+.contact{
+margin-top:150px;
+text-align:center;
+}
 
-.contact h2{font-size:48px;margin-bottom:10px}
+.contact h2{
+font-size:52px;
+margin-bottom:10px;
+}
 
-.contact p{color:#94a3b8}
+.contact p{
+color:#94a3b8;
+}
 
-.contact-grid{display:flex;justify-content:center;gap:80px;margin-top:40px}
+.contact-grid{
+display:flex;
+justify-content:center;
+gap:100px;
+margin-top:40px;
+font-size:20px;
+}
 
-.contact-grid div{font-size:20px}
+.email-btn{
+margin-top:40px;
+display:inline-block;
+padding:16px 36px;
+border-radius:14px;
+background:linear-gradient(45deg,#22d3ee,#a855f7);
+color:white;
+text-decoration:none;
+font-weight:600;
+}
 
-.email-btn{display:inline-block;margin-top:40px;padding:16px 32px;border-radius:14px;background:linear-gradient(45deg,#22d3ee,#a855f7);color:white;text-decoration:none;font-weight:600}
+/* FOOTER */
+.footer{
+margin-top:140px;
+border-top:1px solid #1e293b;
+padding-top:50px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
 
-.footer{margin-top:120px;border-top:1px solid #1e293b;padding-top:40px;display:flex;justify-content:space-between;flex-wrap:wrap}
-
-.footer-links a{display:block;color:#94a3b8;text-decoration:none;margin-bottom:6px}
+.footer-links a{
+display:block;
+margin-bottom:8px;
+color:#94a3b8;
+text-decoration:none;
+}
 
 .footer-links a:hover{color:#22d3ee}
 
-.copy{text-align:center;margin-top:40px;color:#64748b}
+.copy{
+margin-top:40px;
+text-align:center;
+color:#64748b;
+}
 
+/* RESPONSIVE */
 @media(max-width:900px){
+.hero{grid-template-columns:1fr;gap:50px}
 .hero h1{font-size:42px}
 .hero .role{font-size:34px}
 .timeline::before{display:none}
 .timeline-item{width:100%;margin-bottom:30px}
+.contact-grid{flex-direction:column;gap:20px}
 }
 
 </style>
@@ -118,6 +293,7 @@ color:#e5e7eb
 
 <div>
 <h1>Hi, I'm Akshaya Srinivasan.</h1>
+
 <div class="role">Data Engineer & Software Developer.</div>
 
 <p>
@@ -133,16 +309,16 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 </div>
 
 <div class="avatar-box">
-<img src="profile.jpeg" alt="profile">
+<img src="profile.jpeg" alt="Akshaya profile photo">
 </div>
 
 </div>
 
 
-<!-- SKILLS -->
+<!-- TECHNICAL ARSENAL -->
 <div class="section">
 
-<div class="section-title">Technical Arsenal</div>
+<div class="section-title">Technical <span>Arsenal</span></div>
 <div class="section-sub">Specialized in data engineering, cloud platforms, and modern ETL workflows.</div>
 
 <div class="cards">
@@ -198,7 +374,7 @@ I design, develop, and maintain production-grade ETL pipelines and cloud-native 
 <h3>Associate Software Engineer</h3>
 <span>Accenture • Jul 2023 – Jul 2025</span>
 <p>
-Designed production ETL pipelines using SQL/Azure, supported 10+ enterprise clients, improved data quality through schema validation and automation.
+Designed production ETL pipelines using SQL/Azure, supported 10+ enterprise clients and improved data quality through validation automation.
 </p>
 </div>
 
@@ -206,7 +382,7 @@ Designed production ETL pipelines using SQL/Azure, supported 10+ enterprise clie
 <h3>Embedded Systems Training</h3>
 <span>Techvolt Software Solutions • Dec 2021 – Jan 2022</span>
 <p>
-Completed intensive training in embedded systems focusing on hardware‑software integration and low‑level programming.
+Completed intensive training in embedded systems focusing on hardware-software integration and low-level programming.
 </p>
 </div>
 
@@ -218,22 +394,22 @@ Completed intensive training in embedded systems focusing on hardware‑software
 <div class="section">
 
 <div class="section-title">Featured Data Pipelines</div>
-<div class="section-sub">Real‑world projects demonstrating end‑to‑end data architecture and cloud‑native integration.</div>
+<div class="section-sub">Real-world projects demonstrating end-to-end data architecture and cloud-native integration.</div>
 
 <div class="projects">
 
 <div class="project">
-<h3>End‑to‑End Data Engineering Pipeline</h3>
+<h3>End-to-End Data Engineering Pipeline</h3>
 <p>
-Robust data pipeline featuring staging & audit layers for reliable data processing and validation.
+Robust ETL pipeline featuring staging and audit layers for reliable data processing.
 </p>
 <a href="https://github.com/AkshayaSrinivasan15/End-to-End-Data-Engineering-Pipeline" target="_blank">View Code →</a>
 </div>
 
 <div class="project">
-<h3>Cloud‑Native Data Architecture</h3>
+<h3>Cloud-Native Data Architecture</h3>
 <p>
-Scalable AWS data pipeline integrating S3 and PostgreSQL for optimized cloud analytics workflows.
+Scalable AWS pipeline integrating S3 storage and PostgreSQL for optimized analytics workflows.
 </p>
 <a href="https://github.com/AkshayaSrinivasan15/cloud-native-data-engineering-aws" target="_blank">View Code →</a>
 </div>
@@ -250,6 +426,7 @@ Scalable AWS data pipeline integrating S3 and PostgreSQL for optimized cloud ana
 <p>Currently open to new opportunities. Let's connect and discuss how I can add value to your data team.</p>
 
 <div class="contact-grid">
+
 <div>
 <strong>Email</strong><br>
 akshayasrinivasan153@gmail.com
@@ -257,8 +434,9 @@ akshayasrinivasan153@gmail.com
 
 <div>
 <strong>Phone</strong><br>
-+91‑9361485330
++91-9361485330
 </div>
+
 </div>
 
 <a class="email-btn" href="mailto:akshayasrinivasan153@gmail.com">Send an Email</a>
