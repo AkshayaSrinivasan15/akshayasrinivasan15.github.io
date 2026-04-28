@@ -21,18 +21,9 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:'Space Grotesk',sans-serif;
-
-background:linear-gradient(
-135deg,
-#0f172a,
-#020617,
-#1e1b4b
-);
-
+background:linear-gradient(135deg,#0f172a,#020617,#1e1b4b);
 color:#e5e7eb;
-
 }
 
 .container{
@@ -56,12 +47,10 @@ font-weight:700;
 }
 
 .role{
-font-size:46px;
-
+font-size:40px;
 background:linear-gradient(90deg,#a855f7,#38bdf8);
 -webkit-background-clip:text;
 color:transparent;
-
 margin-top:10px;
 }
 
@@ -76,6 +65,7 @@ color:#94a3b8;
 margin-top:30px;
 display:flex;
 gap:14px;
+flex-wrap:wrap;
 }
 
 .btn{
@@ -94,12 +84,6 @@ color:white;
 border:1px solid #334155;
 color:#e5e7eb;
 }
-
-.btn-outline:hover{
-background:#0f172a;
-}
-
-/* IMAGE */
 
 .avatar-box{
 background:linear-gradient(135deg,#111827,#1e293b);
@@ -160,77 +144,6 @@ transition:0.3s;
 transform:translateY(-6px);
 }
 
-.card h3{
-margin-bottom:16px;
-}
-
-.card h3 i{
-color:#a855f7;
-margin-right:10px;
-}
-
-.card ul{
-padding-left:18px;
-line-height:2;
-color:#94a3b8;
-}
-
-/* TIMELINE */
-
-.timeline{
-position:relative;
-margin-top:60px;
-}
-
-.timeline::before{
-content:"";
-position:absolute;
-left:50%;
-top:0;
-bottom:0;
-width:3px;
-background:linear-gradient(#a855f7,#38bdf8);
-}
-
-.timeline-item{
-width:44%;
-padding:36px;
-background:#020617;
-border-radius:18px;
-border:1px solid #334155;
-position:relative;
-}
-
-.timeline-item.left{margin-right:auto}
-.timeline-item.right{margin-left:auto;margin-top:80px}
-
-.timeline-item span{
-color:#38bdf8;
-font-weight:600;
-}
-
-.timeline-item p{
-color:#94a3b8;
-margin-top:10px;
-line-height:1.6;
-}
-
-/* glowing timeline nodes */
-
-.timeline-item::before{
-content:"";
-position:absolute;
-top:40px;
-width:16px;
-height:16px;
-border-radius:50%;
-background:#ec4899;
-box-shadow:0 0 14px #ec4899;
-}
-
-.timeline-item.left::before{right:-40px}
-.timeline-item.right::before{left:-40px}
-
 /* PROJECTS */
 
 .projects{
@@ -251,34 +164,11 @@ color:#94a3b8;
 margin-top:10px;
 }
 
-.project a{
-color:#38bdf8;
-font-weight:600;
-text-decoration:none;
-}
-
 /* CONTACT */
 
 .contact{
 margin-top:150px;
 text-align:center;
-}
-
-.contact h2{
-font-size:48px;
-}
-
-.contact p{
-color:#94a3b8;
-margin-top:10px;
-}
-
-.contact-grid{
-display:flex;
-justify-content:center;
-gap:100px;
-margin-top:40px;
-font-size:20px;
 }
 
 .email-btn{
@@ -292,58 +182,12 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* FOOTER */
-
-.footer{
-margin-top:140px;
-border-top:1px solid #1e293b;
-padding-top:50px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.footer-links a{
-display:block;
-margin-bottom:8px;
-color:#94a3b8;
-text-decoration:none;
-}
-
-.footer-links a:hover{
-color:#38bdf8;
-}
-
-.copy{
-margin-top:40px;
-text-align:center;
-color:#64748b;
-}
-
 /* MOBILE */
 
 @media(max-width:900px){
-
-.hero{
-grid-template-columns:1fr;
-gap:50px;
-}
-
+.hero{grid-template-columns:1fr}
 .hero h1{font-size:42px}
-.role{font-size:34px}
-
-.timeline::before{display:none}
-
-.timeline-item{
-width:100%;
-margin-bottom:30px;
-}
-
-.contact-grid{
-flex-direction:column;
-gap:20px;
-}
-
+.role{font-size:32px}
 }
 
 </style>
@@ -362,19 +206,16 @@ gap:20px;
 
 <h1>Hi, I'm Akshaya Srinivasan</h1>
 
-<div class="role">Data Engineer & Software Developer</div>
+<div class="role">Data Engineer | Azure & AWS | ETL & Lakehouse</div>
 
 <p>
-I design and build scalable ETL pipelines and cloud-native data platforms using Python, SQL, AWS, and Azure.
+Data Engineer with 2+ years of experience building production ETL pipelines and scalable data platforms using Azure and AWS. Specialized in data lakehouse architecture, distributed processing, and reliable data workflows.
 </p>
 
 <div class="buttons">
 
-
 <a class="btn btn-primary" href="resume.pdf" target="_blank">Download Resume</a>
-
 <a class="btn btn-outline" href="https://github.com/AkshayaSrinivasan15">GitHub</a>
-
 <a class="btn btn-outline" href="https://www.linkedin.com/in/akshayasrini/">LinkedIn</a>
 
 </div>
@@ -382,57 +223,57 @@ I design and build scalable ETL pipelines and cloud-native data platforms using 
 </div>
 
 <div class="avatar-box">
-
 <img src="profile.jpeg">
-
 </div>
 
 </div>
 
-<!-- TECHNICAL ARSENAL -->
+<!-- TECH STACK -->
 
 <div class="section">
 
 <div class="section-title">Technical <span>Arsenal</span></div>
-
-<div class="section-sub">
-Technologies I use to build modern data systems.
-</div>
+<div class="section-sub">Technologies I use to build modern data systems.</div>
 
 <div class="cards">
 
 <div class="card">
-<h3><i class="fas fa-code"></i> Programming & Data</h3>
+<h3>Programming & Data</h3>
 <ul>
 <li>Python</li>
 <li>SQL</li>
+<li>PySpark</li>
 <li>Pandas</li>
 </ul>
 </div>
 
 <div class="card">
-<h3><i class="fas fa-cloud"></i> Cloud & Tools</h3>
+<h3>Cloud & Big Data</h3>
 <ul>
-<li>AWS S3 / RDS / CloudWatch</li>
-<li>Microsoft Azure</li>
+<li>Azure (ADF, ADLS Gen2, Databricks, Synapse)</li>
+<li>AWS (S3, RDS, CloudWatch, IAM)</li>
 <li>ETL Pipelines</li>
-<li>Git</li>
+<li>Lakehouse Architecture</li>
 </ul>
 </div>
 
 <div class="card">
-<h3><i class="fas fa-database"></i> Databases</h3>
+<h3>Databases</h3>
 <ul>
 <li>PostgreSQL</li>
+<li>MS SQL Server</li>
 <li>SQLite</li>
 </ul>
 </div>
 
 <div class="card">
-<h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
+<h3>Tools & Practices</h3>
 <ul>
-<li>Problem Solving</li>
-<li>Design Thinking</li>
+<li>Git & GitHub</li>
+<li>CI/CD</li>
+<li>Data Quality & Validation</li>
+<li>Pipeline Monitoring</li>
+<li>Root Cause Analysis</li>
 </ul>
 </div>
 
@@ -445,38 +286,11 @@ Technologies I use to build modern data systems.
 <div class="section">
 
 <div class="section-title">Professional Experience</div>
+<div class="section-sub">Delivering enterprise-scale data solutions.</div>
 
-<div class="section-sub">
-Delivering enterprise-scale data solutions.
-</div>
-
-<div class="timeline">
-
-<div class="timeline-item left">
-
-<h3>Associate Software Engineer</h3>
-
-<span>Accenture • Jul 2023 – Jul 2025</span>
-
-<p>
-Designed production ETL pipelines using SQL/Azure, supported 10+ enterprise clients and improved data quality through schema validation automation.
+<p style="max-width:800px;margin:auto;text-align:center;color:#94a3b8;">
+Associate Software Engineer at Accenture (2023–2025) — Built and maintained production ETL pipelines, supported enterprise-scale data integrations, improved data quality through validation frameworks, and handled monitoring and root-cause analysis.
 </p>
-
-</div>
-
-<div class="timeline-item right">
-
-<h3>Embedded Systems Training</h3>
-
-<span>Techvolt Software Solutions • Dec 2021 – Jan 2022</span>
-
-<p>
-Completed hands-on embedded systems training focusing on hardware-software integration and low-level programming.
-</p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -485,89 +299,47 @@ Completed hands-on embedded systems training focusing on hardware-software integ
 <div class="section">
 
 <div class="section-title">Featured Projects</div>
-
-<div class="section-sub">
-Real-world data engineering pipelines.
-</div>
+<div class="section-sub">Real-world data engineering pipelines.</div>
 
 <div class="projects">
 
 <div class="project">
-
-<h3>End-to-End Data Engineering Pipeline</h3>
-
+<h3>Azure Financial Data Lakehouse (Medallion Architecture)</h3>
 <p>
-Robust ETL pipeline featuring staging and audit layers for reliable data processing.
+Built an end-to-end Azure Data Lakehouse processing 51,000+ financial transactions using Bronze, Silver, and Gold layers with full data lineage via Databricks Unity Catalog.
 </p>
-
-<a href="https://github.com/AkshayaSrinivasan15/End-to-End-Data-Engineering-Pipeline">View Code →</a>
-
+<p>
+Implemented PySpark transformations, Delta Lake MERGE, SCD Type 2 modeling, and real-time streaming pipelines with Auto Loader and Structured Streaming.
+</p>
+<a href="https://github.com/AkshayaSrinivasan15/azure-financial-data-lakehouse">View Code →</a>
 </div>
 
 <div class="project">
-
-<h3>Cloud Native Data Architecture</h3>
-
+<h3>Cloud-Native Data Engineering Pipeline (AWS S3 → RDS PostgreSQL)</h3>
 <p>
-AWS pipeline integrating S3 storage and PostgreSQL for optimized analytics workflows.
+Developed a cloud-native ETL pipeline ingesting semi-structured JSON from Amazon S3 into PostgreSQL using Python and SQL.
 </p>
-
+<p>
+Implemented incremental and idempotent loading, CloudWatch monitoring, and robust validation workflows.
+</p>
 <a href="https://github.com/AkshayaSrinivasan15/cloud-native-data-engineering-aws">View Code →</a>
-
 </div>
 
 </div>
 
 </div>
-
 
 <!-- CONTACT -->
+
 <div class="contact">
 
-<h2>Let's Build Scalable Data Solutions</h2>
+<h2>Let's Build Scalable Data Systems</h2>
 
-<p>Currently open to new opportunities. Let's connect and discuss how I can add value to your data team.</p>
+<p>Open to Data Engineering roles. Let’s connect.</p>
 
-<div class="contact-grid">
-
-<div>
-<strong>Email</strong><br>
-akshayasrinivasan153@gmail.com
-</div>
-
-<div>
-<strong>Phone</strong><br>
-+91-9361485330
-</div>
+<a class="email-btn" href="mailto:akshayasrinivasan153@gmail.com">Contact Me</a>
 
 </div>
-
-<a class="email-btn" href="mailto:akshayasrinivasan153@gmail.com">Send an Email</a>
-
-</div>
-
-
-<!-- FOOTER -->
-<div class="footer">
-
-<div>
-<h3>Akshaya Srinivasan</h3>
-<p>Data Engineer & Software Developer. Designing, developing, and 
-   maintaining production-grade ETL pipelines and cloud-native 
-   data integrations.</p>
-</div>
-
-<div class="footer-links">
-<strong>Quick Links</strong>
-<a href="#">Hero Section</a>
-<a href="#">Technical Skills</a>
-<a href="#">Experience Timeline</a>
-<a href="#">Featured Projects</a>
-</div>
-
-</div>
-
-<div class="copy">© 2025 Akshaya Srinivasan. All rights reserved.</div>
 
 </div>
 
